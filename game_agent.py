@@ -260,7 +260,7 @@ class MinimaxPlayer(IsolationPlayer):
                 elif depth == 0:
                     best_move, score = game.get_player_location(
                         self), self.score(game, self)
-                elif self.time_left() <= 10:
+                elif self.time_left() <= 50:
                     return best_move_so_far(game, game.active_player)
                 else:
                     value = float("+inf")
@@ -280,7 +280,7 @@ class MinimaxPlayer(IsolationPlayer):
                 elif depth == 0:
                     best_move, score = game.get_player_location(
                         self), self.score(game, self)
-                elif self.time_left() <= 10:
+                elif self.time_left() <= 50:
                     return best_move_so_far(game, game.active_player)
                 else:
                     value = float("-inf")
